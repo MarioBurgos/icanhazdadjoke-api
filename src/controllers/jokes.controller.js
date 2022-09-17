@@ -3,7 +3,6 @@ import { FetchService } from "../services/fetch.service.js";
 
 import { CONSTANTS } from "../data/constants.js";
 import { NavigationComponent } from "../components/layout-components/navigation/navigation.component.js";
-import { MainComponent } from "../components/home/home.component.js";
 
 
 //prueba de fetch
@@ -23,9 +22,6 @@ console.log(response);
 window.addEventListener('load', evt =>{
     //carga el header
     let navigationComp = new NavigationComponent();
-    navigationComp.render('#app-header');
-    //carga el main
-    let mainComp = new MainComponent();
-    mainComp.render('#app-home');
+    let divHeader = navigationComp.render('#app-header');
 
 });
