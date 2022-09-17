@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dad Jokes!</title>
-    <link rel="stylesheet" href="src/views/css/style.css">
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- CSS global -->
+    <link rel="stylesheet" href="src/views/css/style.css">
+    <!-- Inyeccion de CSS de componentes -->
 </head>
 <body>
     <!-- el DOM se construye mediante las instancias de los componentes de layout que se invocan en el controlador main -->
     <div class="container">
-        <header class="header" id="app-header"></header>
-        <main class="main" id="app-jokes"></main>
-        <footer class="footer" id="app-footer"></footer>
+        <div id="app-header"></div>
+        <div id="app-jokes"></div>
+        <div id="app-footer"></div>
     </div>
     <script type="module" src="src/controllers/main.controller.js"></script>
 </body>
