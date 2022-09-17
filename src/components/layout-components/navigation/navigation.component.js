@@ -3,12 +3,12 @@ export class NavigationComponent {
   render(selector) {
     // inyectar css
     $("head").append(
-        '<link rel="stylesheet" href="src/components/layout-components/navigation/navigation.component.css" type="text/css" />'
+        '<link rel="stylesheet" href="/src/components/layout-components/navigation/navigation.component.css" type="text/css" />'
       );
       //inyectar html
     $(function () {
       $(selector).load(
-        "src/components/layout-components/navigation/navigation.component.html"
+        "/src/components/layout-components/navigation/navigation.component.html"
       );
     });
   }

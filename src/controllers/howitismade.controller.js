@@ -22,6 +22,6 @@ console.log(response);
 window.addEventListener('load', evt =>{
     //carga el header
     let navigationComp = new NavigationComponent();
-    divHeader = navigationComp.render('#app-header');
+    let divHeader = navigationComp.render('#app-header');
 
 });
