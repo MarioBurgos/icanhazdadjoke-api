@@ -5,20 +5,23 @@ import { CONSTANTS } from "../data/constants.js";
 import { NavigationComponent } from "../components/layout-components/navigation/navigation.component.js";
 
 
+//prueba de fetch
 let joke = new DadJoke();
 let _fs = new FetchService();
 let response = _fs.fetchFromURL(CONSTANTS.URL_DADJOKE)
             .then(res => {
-                let pepe = res;
-                return pepe;
+                let data = res;
+                return data;
             });
 console.log(response);
 
 
 /**EVENT HANDLING */
+
+//on load window:  cargar los componentes de la página
 window.addEventListener('load', evt =>{
-    //crea el header
+    //carga el header
     let navigationComp = new NavigationComponent();
-    divHeader = navigationComp.render('#app-header')
+    divHeader = navigationComp.render('#app-header');
 
 });
