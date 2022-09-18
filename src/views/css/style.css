@@ -2,9 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 :root{
+    /*Fonts*/
     --font-family-menu: 'Plus Jakarta Sans';
     --font-family-joke: 'Fredoka One';
+    /*colors*/
+    --primary-color: rgba(0, 68, 88, 0.877);
+    --overlay-color: rgba(0, 22, 41, 0.85);
+    /*animations*/
+    --menu-speed: 0.75s;
 }
+/*reset values*/
 *{
     margin: 0;
     padding: 0;
