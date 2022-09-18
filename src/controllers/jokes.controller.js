@@ -1,19 +1,5 @@
-import { DadJoke } from "../model/dadjoke.model.js";
-import { FetchService } from "../services/fetch.service.js";
-
-import { CONSTANTS } from "../data/constants.js";
-import { NavigationComponent } from "../components/layout-components/navigation/navigation.component.js";
-
-
-//prueba de fetch
-let joke = new DadJoke();
-let _fs = new FetchService();
-let response = _fs.fetchFromURL(CONSTANTS.URL_DADJOKE)
-            .then(res => {
-                let data = res;
-                return data;
-            });
-console.log(response);
+import { JokeComponent } from "/src/components/joke-component/joke.component.js";
+import { NavigationComponent } from "/src/components/layout-components/navigation/navigation.component.js";
 
 
 /**EVENT HANDLING */
@@ -22,6 +8,8 @@ console.log(response);
 window.addEventListener('load', evt =>{
     //carga el header
     let navigationComp = new NavigationComponent();
-    let divHeader = navigationComp.render('#app-header');
-
+    navigationComp.render('#app-header');
+    //carga el componente Joke
+    let jokeComp = new JokeComponent();
+    jokeComp.render();
 });

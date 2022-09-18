@@ -1,8 +1,8 @@
-import { DadJoke } from "../model/dadjoke.model.js";
-import { FetchService } from "../services/fetch.service.js";
+import { DadJoke } from "/src/model/dadjoke.model.js";
+import { FetchService } from "/src/services/fetch.service.js";
 
-import { CONSTANTS } from "../data/constants.js";
-import { NavigationComponent } from "../components/layout-components/navigation/navigation.component.js";
+import { CONSTANTS } from "/src/data/constants.js";
+import { NavigationComponent } from "/src/components/layout-components/navigation/navigation.component.js";
 
 
 //prueba de fetch
