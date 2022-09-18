@@ -15,8 +15,8 @@ export class JokeComponent {
     });
   }
 
+  /** (Async) Este metodo hace fetch a la url de la api y devuelve una promesa*/
   fetchJoke() {
-    //prueba de fetch
     let joke = new DadJoke();
     let _fs = new FetchService();
     let response = _fs.fetchFromURL(CONSTANTS.URL_DADJOKE).then((res) => {
@@ -25,12 +25,23 @@ export class JokeComponent {
     return response;
   }
 
+  /** el metodo maneja la promesa del metodo fetchJocke de esta clase y cuando tiene respuesta, crea un elemento <p> y le appendChild al html del componente*/
   showJoke(){
     this.fetchJoke().then((res) => {
     let parent = document.querySelector('#joke-value');
     let p = document.createElement('P');
     p.appendChild(document.createTextNode(res.joke));
+    parent.innerHTML = '';
     parent.appendChild(p);
   });
+  }
+
+  /**Añade listener al boton que hay en el html de este componente y que es el que pide y muestra nuevos chistes */
+  addClickListener(){
+    document.addEventListener('click', evt=>{
+      if (evt.target.id == 'btn-new-joke'){
+        this.showJoke();
+      }
+    })
   }
 }

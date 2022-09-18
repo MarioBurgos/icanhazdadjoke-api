@@ -11,6 +11,8 @@ window.addEventListener("load", (evt) => {
   //carga el componente Joke
   let jokeComp = new JokeComponent();
   jokeComp.render("#app-jokes");
-
+  //enseñar el primer chiste
   jokeComp.showJoke();
+  jokeComp.addClickListener();
 });
+
