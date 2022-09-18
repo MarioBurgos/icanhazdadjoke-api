@@ -31,6 +31,10 @@ export class JokeComponent {
     let parent = document.querySelector('#joke-value');
     let p = document.createElement('P');
     p.appendChild(document.createTextNode(res.joke));
+    //controlar el tamaño de letra
+    if (res.joke.length > 125) p.classList.add('text-sm');
+    if (res.joke.length < 125 && res.joke.length > 50) p.classList.add('text-md');
+    if (res.joke.length < 50) p.classList.add('text-lg');
     parent.innerHTML = '';
     parent.appendChild(p);
   });
