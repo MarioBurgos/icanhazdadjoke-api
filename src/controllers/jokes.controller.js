@@ -4,7 +4,7 @@ import { NavigationComponent } from "/src/components/layout-components/navigatio
 /**EVENT HANDLING */
 
 //on load window:  cargar los componentes de la página
-window.addEventListener("load", (evt) => {
+window.addEventListener("load", () => {
   //carga el header
   let navigationComp = new NavigationComponent();
   navigationComp.render("#app-header");
@@ -13,6 +13,6 @@ window.addEventListener("load", (evt) => {
   jokeComp.render("#app-jokes");
   //enseñar el primer chiste
   jokeComp.showJoke();
-  jokeComp.addClickListener();
+  jokeComp.addClickListeners();
 });
 

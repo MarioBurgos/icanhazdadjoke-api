@@ -1,4 +1,10 @@
-
+:root{
+  /*colors*/
+  --primary-color: rgba(0, 70, 80, 0.85);
+  --overlay-color: rgba(0, 0, 0, 0.75);
+  /*animations*/
+  --menu-speed: 0.75s;
+}
 .menu-wrap {
   position: fixed;
   top: 0;
@@ -125,7 +131,12 @@
   opacity: 0;
   transition: opacity 0.4s ease;
 }
+.menu-wrap .menu  ul {
+  padding: 15px 5px;
+  border-radius: 15px; 
+   background-color: rgba(0, 0, 0, 0.75);
 
+}
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
   color: white;
