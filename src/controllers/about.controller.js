@@ -1,20 +1,10 @@
-import { DadJoke } from "/src/model/dadjoke.model.js";
-import { FetchService } from "/src/services/fetch.service.js";
-
-import { CONSTANTS } from "/src/data/constants.js";
 import { NavigationComponent } from "/src/components/layout-components/navigation/navigation.component.js";
 
-
-//prueba de fetch
-let joke = new DadJoke();
-let _fs = new FetchService();
-let response = _fs.fetchFromURL(CONSTANTS.URL_DADJOKE)
-            .then(res => {
-                let data = res;
-                return data;
-            });
-console.log(response);
-
+/**viewport for mobile */
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 /**EVENT HANDLING */
 
